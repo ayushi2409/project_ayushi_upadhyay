@@ -6,7 +6,13 @@ from models import Base, Project, Client, Contact, Newsletter
 from schemas import *
 
 
-app = FastAPI()
+app = FastAPI(
+    title="Flipr Fullstack Backend",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
+)
+
 
 app.add_middleware(
     CORSMiddleware,
